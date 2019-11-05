@@ -11,6 +11,8 @@
 	If a file generates an error, it is copied in a subfolder, 
 	and lists it in a file error_lists.txt
 	
+	WARNING: running do-files from untrusted sources could expose
+	your computer to security risks.	
 ============================================================= */
 
 
@@ -75,10 +77,6 @@ foreach file in `files' {
 		display as result "Done."
 		erase `"`dofilessub'/`errorsubfolder'/`file'"' 
 	}
-	
-
-
-
 }
 // end of loop on files 
 file close _all
